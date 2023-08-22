@@ -12,6 +12,7 @@ const User = require("./models/User");
 // Config JSON response
 app.use(express.json());
 
+
 // Open Route
 app.get("/", (req, res) => {
   res.status(200).json({ msg: "Bem vindo a API!" });
@@ -165,5 +166,6 @@ mongoose
   )
   .then(() => {
     console.log("Conectou ao banco!");
+    app.listen(process.env.PORT || 3000);
   })
   .catch((err) => console.log(err));
