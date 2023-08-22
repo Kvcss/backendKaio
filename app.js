@@ -165,6 +165,5 @@ mongoose
   )
   .then(() => {
     console.log("Conectou ao banco!");
-    app.listen(3000);
   })
   .catch((err) => console.log(err));
